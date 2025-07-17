@@ -1,21 +1,21 @@
 """
 Problem Tanımı : Sözleşme Asistanı(ENG) 
-    -kullanıcının yüklediği bir sözleişme dosyasından içerik çıkarmak
+    -Kullanıcının yüklediği bir sözleşme dosyasından içerik çıkarmak
     -Bu içeriği vektorel olarak temsil edelim(embedding) yapalım
-    - faiss kullanatak hızlı arama yapabilen bir vektör veri tabanı oluştur
-    - kullanıcın soruları anlayıp git db den bilgileri getir llm il ecevap üreticez
+    -faiss kullanatak hızlı arama yapabilen bir vektör veri tabanı oluştur
+    -Kullanıcın soruları anlayıp gidip db den bilgileri getirip ve llm ile cevap üreticez
 
 
 Kullanılan Teknolojiler:
     - embedding : metni vektörleştirme işlemi
-    - fais : vektör veri tabanı hızlı benzerlik aramsı için vektör veri tabanı
-    -gpt3.5 metin üretimi ve cevaplama
+    - faiss : vektör veri tabanı hızlı benzerlik aramsı için vektör veri tabanı
+    - gemini-1.5-flash : metin üretimi ve cevaplama
 
-RAG: Retrieval Augmented Genaraiton: dil modellerine bilgi desteği sağkayan bir teknik
-    - kullanıcı sorularını al. ilgili bilgiyi vektör veri tabanından getir, sonra gpt ile cevap üret
+RAG: Retrieval Augmented Generation: dil modellerine bilgi desteği sağlayan bir teknik
+    - kullanıcı sorularını al. ilgili bilgiyi vektör veri tabanından getir, sonra gemini-1.5-flash ile cevap üret
     - kullanıcın sorusu embedding e dönüştürülür, faiss üzerinden en alakı içerik(chunk) bulunur
     - augmentation : zenginleştirme, kullanıcın sorusu ve ilgili içerik birleştirilir
-    - genaration : gpt ile cevap üretimi
+    - generation : gemini-1.5-flash ile cevap üretimi
 
 Plan/Program:
     - sözleşme belgesinin hazırlanması, yüklenmesi
@@ -28,6 +28,7 @@ Plan/Program:
 Install Libraries: freeze
 
 import libraries
+
 
 """
 
